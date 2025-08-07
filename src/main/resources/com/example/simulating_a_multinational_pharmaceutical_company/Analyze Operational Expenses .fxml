@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_a_multinational_pharmaceutical_company.AnalyzeOperationalExpensesController">
+   <children>
+      <AnchorPane layoutX="-8.0" layoutY="-89.0" prefHeight="619.0" prefWidth="741.0">
+         <children>
+            <Label layoutX="197.0" layoutY="134.0" text="Analyze Operational Expenses" textFill="#bf2222">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="195.0" text="Amount " />
+            <Label layoutX="50.0" layoutY="239.0" text="Catagory" />
+            <Label layoutX="46.0" layoutY="282.0" text="Expense DATE" />
+            <Label layoutX="46.0" layoutY="329.0" text="Discription" />
+            <TextField layoutX="125.0" layoutY="191.0" />
+            <TextArea layoutX="136.0" layoutY="329.0" prefHeight="200.0" prefWidth="200.0" />
+            <DatePicker layoutX="129.0" layoutY="278.0" />
+            <ComboBox layoutX="125.0" layoutY="235.0" prefWidth="150.0" />
+            <Button layoutX="454.0" layoutY="548.0" mnemonicParsing="false" text="Submit " />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

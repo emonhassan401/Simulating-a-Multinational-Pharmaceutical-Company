@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_a_multinational_pharmaceutical_company.ActualSalesVsProjectedBudgetController">
+   <children>
+      <AnchorPane layoutX="-12.0" layoutY="-87.0" prefHeight="821.0" prefWidth="836.0">
+         <children>
+            <Label layoutX="211.0" layoutY="128.0" text=" Actual Sales vs. Projected Budget" textFill="#d71a1a">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="195.0" text="Querter " />
+            <ComboBox layoutX="150.0" layoutY="191.0" prefWidth="150.0" />
+            <Label layoutX="82.0" layoutY="231.0" text="Product Line" />
+            <ComboBox layoutX="158.0" layoutY="227.0" prefWidth="150.0" />
+            <Label layoutX="82.0" layoutY="268.0" text="Total Budget " />
+            <TextField layoutX="159.0" layoutY="264.0" />
+            <Label layoutX="82.0" layoutY="303.0" text="Total sales" />
+            <TextField layoutX="159.0" layoutY="299.0" />
+            <TableView layoutX="422.0" layoutY="189.0" prefHeight="250.0" prefWidth="310.0">
+              <columns>
+                <TableColumn prefWidth="110.0" text="Product line " />
+                <TableColumn prefWidth="61.0" text="Querter " />
+                  <TableColumn prefWidth="61.0" text="Budget " />
+                  <TableColumn prefWidth="76.0" text="sales" />
+              </columns>
+            </TableView>
+            <Button layoutX="122.0" layoutY="345.0" mnemonicParsing="false" text="Add to list " />
+            <Label layoutX="93.0" layoutY="479.0" text="Querter " />
+            <ComboBox layoutX="188.0" layoutY="475.0" prefWidth="150.0" />
+            <Label layoutX="89.0" layoutY="527.0" text="Product Line" />
+            <ComboBox layoutX="188.0" layoutY="523.0" prefWidth="150.0" />
+            <Label layoutX="91.0" layoutY="422.0" text="Select here for compare and genarate report " textFill="#e80e0e" />
+            <Button layoutX="84.0" layoutY="583.0" mnemonicParsing="false" text="show Table" />
+            <Button layoutX="211.0" layoutY="583.0" mnemonicParsing="false" text="Generate report " />
+            <TextArea layoutX="422.0" layoutY="487.0" prefHeight="216.0" prefWidth="310.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
