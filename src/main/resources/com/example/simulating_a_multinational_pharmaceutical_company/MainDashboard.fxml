@@ -15,8 +15,8 @@
                   <Font size="27.0" />
                </font>
             </Label>
-            <Button layoutX="167.0" layoutY="226.0" mnemonicParsing="false" text="Financial Dept" />
-            <Button layoutX="458.0" layoutY="226.0" mnemonicParsing="false" text="Customer SupportDept" />
+            <Button layoutX="167.0" layoutY="226.0" mnemonicParsing="false" onAction="#finacedeptButton" text="Financial Dept" />
+            <Button layoutX="458.0" layoutY="226.0" mnemonicParsing="false" onAction="#CSDbutton" text="Customer SupportDept" />
          </children>
       </AnchorPane>
    </children>
