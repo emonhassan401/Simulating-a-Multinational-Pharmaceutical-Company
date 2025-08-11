@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_a_multinational_pharmaceutical_company.CustomerSupportDashboardController">
+   <children>
+      <AnchorPane layoutX="-14.0" layoutY="-17.0" prefHeight="641.0" prefWidth="781.0">
+         <children>
+            <Label layoutX="228.0" layoutY="98.0" text="Customer Support Dashboard" textFill="#d71414">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <Line endX="-77.0" endY="165.0" layoutX="304.0" layoutY="278.0" startX="-77.0" startY="-79.0" />
+            <Button layoutX="76.0" layoutY="217.0" mnemonicParsing="false" text="Customer Queries" />
+            <Button layoutX="292.0" layoutY="419.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="304.0" text="Create and Submit Support Ticket for Escalation" />
+            <Button layoutX="76.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Product Info" />
+            <Button layoutX="76.0" layoutY="308.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Maintain Customer Feedback " />
+            <Button layoutX="292.0" layoutY="459.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="304.0" text="Update Ticket Status (Open, In Progress, Resolved)" />
+            <Button layoutX="76.0" layoutY="352.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="FAQ Section" />
+            <Label layoutX="278.0" layoutY="221.0" text="Customer Name" />
+            <Label layoutX="278.0" layoutY="252.0" text="Date" />
+            <Label layoutX="280.0" layoutY="285.0" text="priority" />
+            <TextField layoutX="385.0" layoutY="217.0" />
+            <DatePicker layoutX="384.0" layoutY="248.0" />
+            <ComboBox layoutX="384.0" layoutY="290.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

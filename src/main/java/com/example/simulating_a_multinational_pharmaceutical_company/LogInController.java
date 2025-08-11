@@ -2,6 +2,7 @@ package com.example.simulating_a_multinational_pharmaceutical_company;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -9,50 +10,67 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class LogInController {
+import java.io.IOException;
 
-    public TextField nameTextField;
-    public TextField passTextField;
-    public ComboBox<String> roleCombobox;
+public class LogInController
+{
+    @javafx.fxml.FXML
+    private TextField passTextField;
+    @javafx.fxml.FXML
+    private ComboBox<String> roleCombobox;
+    @javafx.fxml.FXML
+    private TextField nameTextField;
 
+    @javafx.fxml.FXML
     public void initialize() {
         roleCombobox.getItems().addAll("Admin", "User");
     }
 
-    public void loginButton(ActionEvent event) {
+    @javafx.fxml.FXML
+    public void loginButton(ActionEvent actionEvent) throws IOException {
         String username = nameTextField.getText().trim();
         String password = passTextField.getText().trim();
         String role = roleCombobox.getValue();
 
-        if (username.isEmpty() || password.isEmpty() || role == null) {
-            showAlert("Please fill all fields");
+        // Validation
+        if (username.isEmpty()) {
+            ShowAlert("Please enter your Username");
+            return;
+        }
+        if (password.isEmpty()) {
+            ShowAlert("Please enter your Password");
+            return;
+        }
+        if (role == null) {
+            ShowAlert("Please select a Role");
             return;
         }
 
-        if ((username.equals("admin") && password.equals("123") && role.equals("Admin")) ||
-                (username.equals("user") && password.equals("123") && role.equals("User"))) {
-            switchToDashboard((Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow());
+        // Example login check (Replace this with your real authentication logic)
+        if (username.equals("admin") && password.equals("123") && role.equals("Admin")) {
+            switchToDashboard(actionEvent);
+        } else if (username.equals("user") && password.equals("123") && role.equals("User")) {
+            switchToDashboard(actionEvent);
         } else {
-            showAlert("Invalid username, password, or role");
+            ShowAlert("Invalid username, password, or role");
         }
     }
 
-    private void switchToDashboard(Stage stage) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("MainDashboard.fxml"));
-            Parent root = loader.load();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Main Dashboard");
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-            showAlert("Error loading Main Dashboard");
-        }
-    }
-
-    private void showAlert(String msg) {
+    void ShowAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setContentText(msg);
+        alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    private void switchToDashboard(ActionEvent event) throws IOException {
+
+//            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Stage stage = new Stage() ;
+            Parent root = FXMLLoader.load(getClass().getResource("MainDashboard.fxml"));
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
     }
 }
