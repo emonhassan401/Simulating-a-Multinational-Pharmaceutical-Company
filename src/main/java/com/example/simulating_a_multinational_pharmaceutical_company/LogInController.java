@@ -64,10 +64,8 @@ public class LogInController
 
     private void switchToDashboard(ActionEvent event) throws IOException {
 
-//            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Stage stage = new Stage() ;
-            Parent root = FXMLLoader.load(getClass().getResource("MainDashboard.fxml"));
-
+           Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                   Parent root = FXMLLoader.load(getClass().getResource("MainDashBoard.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();

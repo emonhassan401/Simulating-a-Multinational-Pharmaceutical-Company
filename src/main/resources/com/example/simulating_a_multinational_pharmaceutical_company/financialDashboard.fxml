@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="538.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_a_multinational_pharmaceutical_company.FinancialDashboardController">
    <children>
@@ -24,20 +23,20 @@
                </font>
             </Label>
             <Line endX="-100.0" endY="304.0" layoutX="313.0" layoutY="145.0" startX="-100.0" />
-            <Button layoutX="35.0" layoutY="184.0" mnemonicParsing="false" text="Sales Report" />
-            <Button layoutX="35.0" layoutY="225.0" mnemonicParsing="false" text="Export Finance Report" />
-            <Button layoutX="35.0" layoutY="263.0" mnemonicParsing="false" text="Product Category " />
-            <Button layoutX="35.0" layoutY="297.0" mnemonicParsing="false" text="Analyze Operational Expenses " />
-            <Button layoutX="35.0" layoutY="330.0" mnemonicParsing="false" text="Sales &amp; Budget " />
-            <Button layoutX="35.0" layoutY="365.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="167.0" text="Collaboration with OtherDepartments" />
+            <Button layoutX="35.0" layoutY="184.0" mnemonicParsing="false" onAction="#salesReportButton" text="Sales Report" />
+            <Button layoutX="35.0" layoutY="225.0" mnemonicParsing="false" onAction="#exportFinanReportButton" text="Export Finance Report" />
+            <Button layoutX="35.0" layoutY="263.0" mnemonicParsing="false" onAction="#pCatagogyButton" text="Product Category " />
+            <Button layoutX="35.0" layoutY="297.0" mnemonicParsing="false" onAction="#AOEButton" text="Analyze Operational Expenses " />
+            <Button layoutX="35.0" layoutY="330.0" mnemonicParsing="false" onAction="#salesBudgetButton" text="Sales &amp; Budget " />
+            <Button layoutX="35.0" layoutY="365.0" mnemonicParsing="false" onAction="#colabWithOtherDeptButton" prefHeight="28.0" prefWidth="167.0" text="Collaboration with OtherDepartments" />
             <Label layoutX="227.0" layoutY="176.0" prefHeight="17.0" prefWidth="149.0" text="Total Monthly Revenue" />
             <Label layoutX="274.0" layoutY="217.0" text="Total Expenses" />
             <Label layoutX="274.0" layoutY="255.0" text="Monthly Profit" />
-            <TextField layoutX="398.0" layoutY="172.0" />
-            <TextField layoutX="398.0" layoutY="213.0" />
-            <TextField layoutX="398.0" layoutY="251.0" />
-            <Button layoutX="362.0" layoutY="318.0" mnemonicParsing="false" text="show Data" />
-            <PieChart layoutX="302.0" layoutY="355.0" prefHeight="179.0" prefWidth="283.0" />
+            <TextField fx:id="revenueTextField" layoutX="398.0" layoutY="172.0" />
+            <TextField fx:id="expenseTextField" layoutX="398.0" layoutY="213.0" />
+            <TextField fx:id="profitTextField" layoutX="398.0" layoutY="251.0" />
+            <Button layoutX="362.0" layoutY="318.0" mnemonicParsing="false" onAction="#showDataButton" text="show Data" />
+            <TextArea fx:id="showDataTextArea" layoutX="461.0" layoutY="330.0" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </AnchorPane>
    </children>
