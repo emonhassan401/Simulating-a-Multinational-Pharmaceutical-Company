@@ -25,7 +25,7 @@ public class CollaborationWithOtherDepartmentsController
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Populate departments
+
         deptComBoBox.getItems().addAll(
                 "Research & Development",
                 "Manufacturing",
@@ -36,7 +36,7 @@ public class CollaborationWithOtherDepartmentsController
                 "Logistics / Supply Chain"
         );
 
-        // Populate query types
+
         queryComboBox.getItems().addAll(
                 "Data Request",
                 "Meeting Request",
