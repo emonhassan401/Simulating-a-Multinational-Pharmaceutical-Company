@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
@@ -19,18 +20,19 @@
                </font>
             </Label>
             <Line endX="-77.0" endY="165.0" layoutX="304.0" layoutY="278.0" startX="-77.0" startY="-79.0" />
-            <Button layoutX="76.0" layoutY="217.0" mnemonicParsing="false" text="Customer Queries" />
-            <Button layoutX="292.0" layoutY="419.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="304.0" text="Create and Submit Support Ticket for Escalation" />
-            <Button layoutX="76.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Product Info" />
-            <Button layoutX="76.0" layoutY="308.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Maintain Customer Feedback " />
-            <Button layoutX="292.0" layoutY="459.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="304.0" text="Update Ticket Status (Open, In Progress, Resolved)" />
-            <Button layoutX="76.0" layoutY="352.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="FAQ Section" />
+            <Button layoutX="76.0" layoutY="217.0" mnemonicParsing="false" onAction="#newCustomerQueryButton" text="New Customer Queries" />
+            <Button layoutX="75.0" layoutY="472.0" mnemonicParsing="false" onAction="#supportTicketForEscalationButton" prefHeight="25.0" prefWidth="304.0" text="Create and Submit Support Ticket for Escalation" />
+            <Button layoutX="76.0" layoutY="261.0" mnemonicParsing="false" onAction="#maintainCustomerfeedbackButton" prefHeight="25.0" prefWidth="112.0" text="Maintain Customer Feedback " />
+            <Button layoutX="76.0" layoutY="518.0" mnemonicParsing="false" onAction="#checkTicketStatusButton" prefHeight="25.0" prefWidth="304.0" text="Update Ticket Status (Open, In Progress, Resolved)" />
+            <Button layoutX="76.0" layoutY="309.0" mnemonicParsing="false" onAction="#faqButton" prefHeight="25.0" prefWidth="112.0" text="FAQ Section" />
             <Label layoutX="278.0" layoutY="221.0" text="Customer Name" />
             <Label layoutX="278.0" layoutY="252.0" text="Date" />
             <Label layoutX="280.0" layoutY="285.0" text="priority" />
             <TextField fx:id="customerNameTextField" layoutX="385.0" layoutY="217.0" />
             <DatePicker fx:id="dateDatePicker" layoutX="384.0" layoutY="248.0" />
             <ComboBox fx:id="priorityComboBox" layoutX="384.0" layoutY="290.0" prefWidth="150.0" />
+            <Button layoutX="296.0" layoutY="334.0" mnemonicParsing="false" onAction="#addButton" text="ADD" />
+            <TextArea fx:id="showTextArea" layoutX="491.0" layoutY="334.0" prefHeight="200.0" prefWidth="200.0" />
          </children>
       </AnchorPane>
    </children>

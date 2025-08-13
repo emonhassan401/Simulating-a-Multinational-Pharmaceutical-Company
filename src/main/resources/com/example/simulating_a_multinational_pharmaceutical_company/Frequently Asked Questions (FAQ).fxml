@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_a_multinational_pharmaceutical_company.FrequentlyAskedQuestionsFAQController">
+   <children>
+      <AnchorPane layoutX="-90.0" layoutY="-70.0" prefHeight="645.0" prefWidth="899.0">
+         <children>
+            <Label layoutX="314.0" layoutY="124.0" text="Frequently Asked Questions (FAQ)" textFill="#862828">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="131.0" layoutY="212.0" text="Category List:General System UsageOrder &amp; Supply ChainMedical RegulationsTechnical SupportData Security &amp; PrivacyBilling &amp; Payments" />
+            <ComboBox fx:id="catagoryListComboBox" layoutX="308.0" layoutY="243.0" prefWidth="150.0" />
+            <Label layoutX="131.0" layoutY="293.0" text="Question " />
+            <TextArea fx:id="questionTextArea" layoutX="225.0" layoutY="293.0" prefHeight="200.0" prefWidth="200.0" />
+            <Button layoutX="225.0" layoutY="519.0" mnemonicParsing="false" onAction="#submitButton" text="Submit" />
+            <Button fx:id="cUsButton" layoutX="594.0" layoutY="310.0" mnemonicParsing="false" text="Contact Us " />
+            <Button layoutX="594.0" layoutY="368.0" mnemonicParsing="false" onAction="#callSupportButton" text="Call Support " />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

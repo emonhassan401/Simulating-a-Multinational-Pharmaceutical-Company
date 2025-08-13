@@ -7,8 +7,8 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_a_multinational_pharmaceutical_company.AnalyzeOperationalExpensesController">
    <children>
@@ -20,14 +20,17 @@
                </font>
             </Label>
             <Label layoutX="50.0" layoutY="195.0" text="Amount " />
-            <Label layoutX="50.0" layoutY="239.0" text="Catagory" />
+            <Label layoutX="50.0" layoutY="239.0" text="CatagoryRent, Utilities, HR Salaries, Transport" />
             <Label layoutX="46.0" layoutY="282.0" text="Expense DATE" />
             <Label layoutX="46.0" layoutY="329.0" text="Discription" />
-            <TextField layoutX="125.0" layoutY="191.0" />
-            <TextArea layoutX="136.0" layoutY="329.0" prefHeight="200.0" prefWidth="200.0" />
-            <DatePicker layoutX="129.0" layoutY="278.0" />
-            <ComboBox layoutX="125.0" layoutY="235.0" prefWidth="150.0" />
-            <Button layoutX="454.0" layoutY="548.0" mnemonicParsing="false" text="Submit " />
+            <TextField fx:id="ammountextField" layoutX="125.0" layoutY="191.0" />
+            <TextArea fx:id="discriptionTextArea" layoutX="136.0" layoutY="329.0" prefHeight="69.0" prefWidth="174.0" />
+            <DatePicker fx:id="expanseDate" layoutX="129.0" layoutY="278.0" />
+            <ComboBox fx:id="catagoryComboBox" layoutX="316.0" layoutY="235.0" prefWidth="150.0" />
+            <Button layoutX="97.0" layoutY="431.0" mnemonicParsing="false" text="Submit ANd Show" />
+            <Line endX="-100.0" endY="175.0" layoutX="436.0" layoutY="366.0" startX="-100.0" />
+            <TextArea fx:id="showTextArea" layoutX="379.0" layoutY="364.0" prefHeight="187.0" prefWidth="320.0" />
+            <Button layoutX="71.0" layoutY="517.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
          </children>
       </AnchorPane>
    </children>

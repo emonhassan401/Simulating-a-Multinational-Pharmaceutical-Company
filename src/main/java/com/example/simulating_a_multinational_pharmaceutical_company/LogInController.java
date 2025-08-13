@@ -10,7 +10,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 
 public class LogInController
 {
@@ -21,9 +21,12 @@ public class LogInController
     @javafx.fxml.FXML
     private TextField nameTextField;
 
+    private final String FILE_NAME = "loginData.bin";
+
     @javafx.fxml.FXML
     public void initialize() {
         roleCombobox.getItems().addAll("Admin", "User");
+        loadLoginData(); // auto-fill if file exists
     }
 
     @javafx.fxml.FXML
@@ -32,7 +35,6 @@ public class LogInController
         String password = passTextField.getText().trim();
         String role = roleCombobox.getValue();
 
-        // Validation
         if (username.isEmpty()) {
             ShowAlert("Please enter your Username");
             return;
@@ -46,10 +48,11 @@ public class LogInController
             return;
         }
 
-        // Example login check (Replace this with your real authentication logic)
         if (username.equals("admin") && password.equals("123") && role.equals("Admin")) {
+            saveLoginData(username, password, role);
             switchToDashboard(actionEvent);
         } else if (username.equals("user") && password.equals("123") && role.equals("User")) {
+            saveLoginData(username, password, role);
             switchToDashboard(actionEvent);
         } else {
             ShowAlert("Invalid username, password, or role");
@@ -63,12 +66,32 @@ public class LogInController
     }
 
     private void switchToDashboard(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("MainDashBoard.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
-           Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                   Parent root = FXMLLoader.load(getClass().getResource("MainDashBoard.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+    private void saveLoginData(String username, String password, String role) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
+            out.writeUTF(username);
+            out.writeUTF(password);
+            out.writeUTF(role);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    private void loadLoginData() {
+        File file = new File(FILE_NAME);
+        if (!file.exists()) return;
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
+            nameTextField.setText(in.readUTF());
+            passTextField.setText(in.readUTF());
+            roleCombobox.setValue(in.readUTF());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

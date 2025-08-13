@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_a_multinational_pharmaceutical_company.CollaborationWithOtherDepartmentsController">
    <children>
       <AnchorPane layoutX="-36.0" layoutY="-16.0" prefHeight="513.0" prefWidth="673.0">
@@ -19,14 +18,15 @@
                </font>
             </Label>
             <Label layoutX="119.0" layoutY="198.0" text="Select Dept " />
-            <ComboBox layoutX="200.0" layoutY="194.0" prefWidth="150.0" />
+            <ComboBox fx:id="deptComBoBox" layoutX="200.0" layoutY="194.0" prefWidth="150.0" />
             <Label layoutX="119.0" layoutY="161.0" text="Name" />
-            <TextField layoutX="201.0" layoutY="157.0" />
+            <TextField fx:id="nameTextField" layoutX="201.0" layoutY="157.0" />
             <Label layoutX="119.0" layoutY="240.0" text="select Query " />
-            <ComboBox layoutX="201.0" layoutY="236.0" prefWidth="150.0" />
+            <ComboBox fx:id="queryComboBox" layoutX="201.0" layoutY="236.0" prefWidth="150.0" />
             <Label layoutX="105.0" layoutY="327.0" text="Message To Dept " />
-            <TextArea layoutX="251.0" layoutY="277.0" prefHeight="130.0" prefWidth="276.0" />
-            <Button layoutX="343.0" layoutY="442.0" mnemonicParsing="false" text="send" />
+            <TextArea fx:id="mszTextArea" layoutX="251.0" layoutY="277.0" prefHeight="130.0" prefWidth="276.0" />
+            <Button layoutX="343.0" layoutY="442.0" mnemonicParsing="false" onAction="#sendButton" text="send" />
+            <Button layoutX="67.0" layoutY="455.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
          </children>
       </AnchorPane>
    </children>

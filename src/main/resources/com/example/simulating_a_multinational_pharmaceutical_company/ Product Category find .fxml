@@ -40,6 +40,7 @@
             </TableView>
             <TextArea fx:id="ShowTextField" layoutX="477.0" layoutY="363.0" prefHeight="200.0" prefWidth="200.0" />
             <DatePicker fx:id="dateDatePicker" layoutX="206.0" layoutY="143.0" />
+            <Button layoutX="97.0" layoutY="538.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
          </children>
       </AnchorPane>
    </children>

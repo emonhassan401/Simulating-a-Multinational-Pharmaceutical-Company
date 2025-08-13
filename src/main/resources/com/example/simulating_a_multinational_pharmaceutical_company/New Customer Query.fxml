@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_a_multinational_pharmaceutical_company.NewCustomerQueryController">
    <children>
       <Label layoutX="182.0" layoutY="38.0" text="New Customer Query">
@@ -20,17 +19,17 @@
          <children>
             <Label layoutX="84.0" layoutY="136.0" text="Customer name" />
             <Label layoutX="56.0" layoutY="189.0" text="Inquiry Type (Complaint / Info / Feedback)" />
-            <ComboBox layoutX="305.0" layoutY="185.0" prefWidth="150.0" />
-            <TextField layoutX="197.0" layoutY="132.0" />
+            <ComboBox fx:id="inquiryComboBox" layoutX="305.0" layoutY="185.0" prefWidth="150.0" />
+            <TextField fx:id="nameTextField" layoutX="197.0" layoutY="132.0" />
             <Label layoutX="56.0" layoutY="232.0" text="Customer Type  New / Returning / VIP" />
             <Label layoutX="84.0" layoutY="268.0" text="Email Address" />
             <Label layoutX="84.0" layoutY="301.0" text="Phone Number " />
             <Label layoutX="84.0" layoutY="325.0" text="Address " />
-            <TextField layoutX="185.0" layoutY="264.0" />
-            <TextField layoutX="185.0" layoutY="297.0" />
-            <TextArea layoutX="159.0" layoutY="334.0" prefHeight="200.0" prefWidth="200.0" />
-            <Button layoutX="489.0" layoutY="441.0" mnemonicParsing="false" text="ADD INFO" />
-            <ComboBox layoutX="305.0" layoutY="228.0" prefWidth="150.0" />
+            <TextField fx:id="emailTextField" layoutX="185.0" layoutY="264.0" />
+            <TextField fx:id="numberTextField" layoutX="185.0" layoutY="297.0" />
+            <TextArea fx:id="addressTextArea" layoutX="159.0" layoutY="334.0" prefHeight="200.0" prefWidth="200.0" />
+            <Button layoutX="420.0" layoutY="440.0" mnemonicParsing="false" onAction="#addTobinButton" text="ADD INFO" />
+            <ComboBox fx:id="customerTypeComboBox" layoutX="305.0" layoutY="228.0" prefWidth="150.0" />
          </children>
       </AnchorPane>
    </children>

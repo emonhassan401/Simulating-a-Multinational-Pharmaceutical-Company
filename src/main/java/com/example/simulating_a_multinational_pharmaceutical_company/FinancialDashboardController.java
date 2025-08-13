@@ -37,7 +37,7 @@ public class FinancialDashboardController {
                 oos.writeObject(data);
             }
 
-            // Load last saved data
+
             try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("financialData.bin"))) {
                 financialDashboardClass loadedData = (financialDashboardClass) ois.readObject();
                 showDataTextArea.setText(loadedData.toString());
@@ -66,7 +66,21 @@ public class FinancialDashboardController {
 
 
     @FXML
-    public void colabWithOtherDeptButton(ActionEvent actionEvent) {}
+    public void colabWithOtherDeptButton(ActionEvent actionEvent) throws IOException{
+        tt(actionEvent,"Collaboration with Other  Departments.fxml") ;
+    }
+
+    private void tt(ActionEvent event, String fxmlPath) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
+
 
 
     @FXML
@@ -87,12 +101,44 @@ public class FinancialDashboardController {
 
 
 
-    @FXML
-    public void AOEButton(ActionEvent actionEvent) {}
+
+
 
     @FXML
-    public void salesBudgetButton(ActionEvent actionEvent) {}
+    public void salesBudgetButton(ActionEvent actionEvent) throws IOException {
+
+        switchToDashboarddd(actionEvent,"Actual Sales vs. Projected Budget .fxml");
+
+    }
+
+
+
+    private void switchToDashboarddd(ActionEvent event, String fxmlPath) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
 
     @FXML
-    public void exportFinanReportButton(ActionEvent actionEvent) {}
+    public void AoEbutton(ActionEvent actionEvent) throws IOException {
+        yy(actionEvent, "/com/example/simulating_a_multinational_pharmaceutical_company/AnalyzeOperationalExpenses.fxml");
+    }
+
+    private void yy(ActionEvent event, String fxmlPath) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
+
 }
+

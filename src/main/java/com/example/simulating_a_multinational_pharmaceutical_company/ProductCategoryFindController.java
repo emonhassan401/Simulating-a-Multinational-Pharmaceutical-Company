@@ -1,9 +1,15 @@
 package com.example.simulating_a_multinational_pharmaceutical_company;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -106,4 +112,21 @@ public class ProductCategoryFindController {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) throws IOException {
+              ddt(actionEvent,"financialDashboard.fxml") ;
+    }
+    private void ddt(ActionEvent event, String fxmlPath) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }
+
+
+
+

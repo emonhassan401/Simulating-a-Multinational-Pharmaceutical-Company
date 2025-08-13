@@ -36,8 +36,9 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <TextArea fx:id="reportTextArea" layoutX="201.0" layoutY="355.0" prefHeight="236.0" prefWidth="607.0" />
+            <TextArea fx:id="reportTextArea" layoutX="235.0" layoutY="389.0" prefHeight="200.0" prefWidth="607.0" />
             <ComboBox fx:id="salesRegionComboBox" layoutX="213.0" layoutY="181.0" prefWidth="150.0" />
+            <Button layoutX="95.0" layoutY="564.0" mnemonicParsing="false" onAction="#backBUtton" text="Back" />
          </children>
       </AnchorPane>
    </children>
