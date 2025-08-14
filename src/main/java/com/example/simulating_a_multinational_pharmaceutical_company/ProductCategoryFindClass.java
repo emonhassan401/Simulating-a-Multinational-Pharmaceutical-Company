@@ -7,7 +7,7 @@ public class ProductCategoryFindClass {
     private String productCatagory;
     private LocalDate date;
 
-    // Constructor: date first, category second
+
     public ProductCategoryFindClass(LocalDate date, String productCatagory) {
         this.date = date;
         this.productCatagory = productCatagory;

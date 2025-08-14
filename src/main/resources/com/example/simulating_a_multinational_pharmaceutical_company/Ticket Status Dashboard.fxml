@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_a_multinational_pharmaceutical_company.TicketStatusDashboardController">
    <children>
       <AnchorPane layoutX="-88.0" layoutY="-83.0" prefHeight="607.0" prefWidth="806.0">
@@ -34,6 +33,7 @@
                 <TableColumn fx:id="statusCol" prefWidth="187.0" text="Status" />
               </columns>
             </TableView>
+            <Button layoutX="161.0" layoutY="521.0" mnemonicParsing="false" onAction="#bButton" text="back" />
          </children>
       </AnchorPane>
    </children>

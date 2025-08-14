@@ -27,9 +27,11 @@
             <Label layoutX="84.0" layoutY="325.0" text="Address " />
             <TextField fx:id="emailTextField" layoutX="185.0" layoutY="264.0" />
             <TextField fx:id="numberTextField" layoutX="185.0" layoutY="297.0" />
-            <TextArea fx:id="addressTextArea" layoutX="159.0" layoutY="334.0" prefHeight="200.0" prefWidth="200.0" />
-            <Button layoutX="420.0" layoutY="440.0" mnemonicParsing="false" onAction="#addTobinButton" text="ADD INFO" />
+            <TextArea fx:id="addressTextArea" layoutX="159.0" layoutY="334.0" prefHeight="50.0" prefWidth="200.0" />
+            <Button layoutX="86.0" layoutY="428.0" mnemonicParsing="false" onAction="#addTobinButton" text="ADD INFO" />
             <ComboBox fx:id="customerTypeComboBox" layoutX="305.0" layoutY="228.0" prefWidth="150.0" />
+            <TextArea fx:id="showtextarea" layoutX="214.0" layoutY="396.0" prefHeight="200.0" prefWidth="200.0" />
+            <Button layoutX="561.0" layoutY="584.0" mnemonicParsing="false" onAction="#backButton" text="back" />
          </children>
       </AnchorPane>
    </children>

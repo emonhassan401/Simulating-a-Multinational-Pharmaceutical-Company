@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -14,15 +15,10 @@
          <children>
             <Label layoutX="120.0" layoutY="97.0" text="Customer Name " />
             <Label layoutX="120.0" layoutY="123.0" text="Customer ID " />
-            <Label layoutX="120.0" layoutY="158.0" text="FeedBack Status" />
-            <RadioButton fx:id="vStarRadioButton" layoutX="238.0" layoutY="158.0" mnemonicParsing="false" text="5 Stars &amp; AboveBelow " />
-            <RadioButton fx:id="iiiStarRadioButton" layoutX="399.0" layoutY="158.0" mnemonicParsing="false" text="3 Stars" />
-            <RadioButton layoutX="485.0" layoutY="158.0" mnemonicParsing="false" onAction="#ivStarRadioButton" text=" Only4 Stars" />
+            <Label layoutX="86.0" layoutY="272.0" text="FeedBack Status" />
             <TextField fx:id="nameTextField" layoutX="229.0" layoutY="93.0" />
             <TextField fx:id="idTextField" layoutX="229.0" layoutY="119.0" />
-            <Button layoutX="120.0" layoutY="218.0" mnemonicParsing="false" onAction="#addTOlist" text="ADD to LIST" />
-            <Label layoutX="117.0" layoutY="311.0" text="FeedBack Status" />
-            <Button layoutX="137.0" layoutY="371.0" mnemonicParsing="false" onAction="#findAndShowButton" text="Find and show" />
+            <Button layoutX="170.0" layoutY="341.0" mnemonicParsing="false" onAction="#addTOlist" text="ADD to LIST" />
             <TableView fx:id="tableView" layoutX="385.0" layoutY="353.0" prefHeight="200.0" prefWidth="200.0">
               <columns>
                 <TableColumn fx:id="cnameCol" prefWidth="75.0" text=" C name" />
@@ -30,9 +26,10 @@
               </columns>
             </TableView>
             <Label layoutX="309.0" layoutY="31.0" text="Customer FeedBack " />
-            <RadioButton fx:id="filtervStarRadioButton1" layoutX="233.0" layoutY="311.0" mnemonicParsing="false" text="5 Stars &amp; AboveBelow " />
-            <RadioButton fx:id="filteriiiStarRadioButton1" layoutX="389.0" layoutY="311.0" mnemonicParsing="false" text="3 Stars" />
-            <RadioButton layoutX="462.0" layoutY="311.0" mnemonicParsing="false" onAction="#filterivStarRadioButton" text=" Only4 Stars" />
+            <ComboBox fx:id="feedbackStatusComboBox" layoutX="193.0" layoutY="268.0" prefWidth="150.0" />
+            <Button layoutX="65.0" layoutY="528.0" mnemonicParsing="false" onAction="#backButtion" text="Back" />
+            <Label layoutX="117.0" layoutY="159.0" text="Discribe About Solved Issue " />
+            <TextArea fx:id="describeissueTextArea" layoutX="285.0" layoutY="159.0" prefHeight="84.0" prefWidth="200.0" />
          </children>
       </AnchorPane>
    </children>
