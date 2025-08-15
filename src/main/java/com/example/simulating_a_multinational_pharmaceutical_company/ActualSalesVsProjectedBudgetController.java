@@ -75,7 +75,7 @@ public class ActualSalesVsProjectedBudgetController
             return;
         }
 
-        // read from bin file
+
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
             ArrayList<ActualSalesVsProjectedBudgeClass> listFromFile =
                     (ArrayList<ActualSalesVsProjectedBudgeClass>) ois.readObject();

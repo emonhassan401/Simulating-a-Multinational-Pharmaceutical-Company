@@ -13,7 +13,7 @@ public class MainDashboardController {
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Initialization code if needed
+
     }
 
     @javafx.fxml.FXML

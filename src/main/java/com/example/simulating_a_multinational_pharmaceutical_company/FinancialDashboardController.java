@@ -26,7 +26,7 @@ public class FinancialDashboardController {
     @FXML
     public void showDataButton(ActionEvent actionEvent) {
         try {
-            // Save the data
+
             financialDashboardClass data = new financialDashboardClass(
                     expenseTextField.getText(),
                     revenueTextField.getText(),
