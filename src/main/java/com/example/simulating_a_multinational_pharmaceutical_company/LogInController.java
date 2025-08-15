@@ -26,7 +26,7 @@ public class LogInController
     @javafx.fxml.FXML
     public void initialize() {
         roleCombobox.getItems().addAll("Admin", "User");
-        loadLoginData(); // auto-fill if file exists
+        loadLoginData();
     }
 
     @javafx.fxml.FXML
